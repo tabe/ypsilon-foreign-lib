@@ -1,0 +1,19 @@
+Ypsilon libraries -- A collection of libraries for Ypsilon Scheme
+
+== License
+
+New BSD License
+
+== Acknowledgements
+
+Special thanks to the author of Ypsilon Scheme System [0].
+
+== Notes
+
+* Tests of library (ypsilon gcrypt) requires external library (base64) [1].
+  Run `YPSILON_SITELIB="path of (base64)" make test'.
+
+== Index
+
+[0] http://code.google.com/p/ypsilon/
+[1] http://github.com/tabe/base64/
