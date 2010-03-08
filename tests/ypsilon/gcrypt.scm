@@ -29,6 +29,11 @@
 (define *data* (string->utf8 *string*))
 (define *expected* "Nace+U3Az4OhN7tISqgs1vdLBHBEijWcBeCqL5xN9xg=")
 
+(display (gcry_check_version "1.4.5")) ; you might modify the version
+(newline)
+(gcry_control GCRYCTL_DISABLE_SECMEM)
+(gcry_control GCRYCTL_INITIALIZATION_FINISHED)
+
 (let* ((hdp (make-bytevector sizeof:void*)))
   (gcry_md_open hdp GCRY_MD_SHA256 GCRY_MD_FLAG_HMAC)
   (let ((hd (make-bytevector-mapping (c-void*-ref hdp) sizeof:void*)))
